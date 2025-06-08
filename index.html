@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Прогноз погоди на 5 днів</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body><div class="weather-container">
+  <input type="text" id="cityInput" placeholder="Введіть місто" autocomplete="off" />
+  <div id="autocomplete-list" class="autocomplete-items"></div>
+  <button id="searchBtn">Пошук</button>
+
+  <h1 class="city">Завантаження...</h1>
+  <div class="forecast" id="forecast"></div>
+</div>
+
+<style>
+  .autocomplete-items {
+    border: 1px solid #d4d4d4;
+    border-top: none;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    background-color: white;
+    width: 200px;
+    z-index: 99;
+  }
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+  }
+  .autocomplete-items div:hover {
+    background-color: #e9e9e9;
+  }
+</style>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
