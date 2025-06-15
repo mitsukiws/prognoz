@@ -44,6 +44,19 @@ if ([1000].includes(conditionCode)) {
         const condition = day.day.condition;
         const icon = `https:${condition.icon}`;
         const desc = condition.text;
+       
+        console.log(day)
+        let avarageTemp = data.current.temp_c
+        if (avarageTemp >= 30) {
+           document.body.style.background = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTISNVgKrJsl3LrHro9JbUZJgzrJ8UDLcDOtg&s')"
+        }else if (avarageTemp <= 10) {
+          document.body.style.background = "url('https://img.freepik.com/premium-photo/dramatic-black-white-sky-before-thunderstorm-heavenly-landscape-cold-weather-rainy-season_615860-1092.jpg')"
+        }else if (avarageTemp > 10 && avarageTemp < 30) {
+          document.body.style.background = "url('https://portal.azertag.az/uploads/news-files/2022/Oktyabr/5c46deb7e95ad.jpg')"
+        }
+
+        // document.body.style.background;
+
 
         const minTemp = day.day.mintemp_c;
         const maxTemp = day.day.maxtemp_c;

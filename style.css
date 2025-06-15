@@ -4,6 +4,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 20px;
+  background-size: cover;
 }
 
 .weather-container {
@@ -23,7 +24,7 @@ input#cityInput {
   border-radius: 4px 0 0 4px;
   font-size: 16px;
   background-color: #4a4a4a;
-  color: #e0e0e0;
+  color: #ffffff;
   outline: none;
   box-sizing: border-box;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -101,7 +102,7 @@ h1.city {
 .temp {
   font-weight: 700;
   margin: 6px 0;
-  color: #f5f5f5;
+  color: #bbb;
 }
 
 .info {
@@ -262,4 +263,13 @@ body.snowy::before {
 @keyframes snow {
   0% { background-position: 0 0, 5px 5px; }
   100% { background-position: 0 100px, 5px 105px; }
+}
+
+#autocomplete-list{
+  top: 3.2rem;
+  left: 1.8rem;
+}
+
+body {
+  background-size: cover !important;
 }
