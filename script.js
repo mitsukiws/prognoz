@@ -7,7 +7,7 @@ const autocompleteList = document.getElementById("autocomplete-list");
 const WEATHER_API_KEY = "2349b9ad02a848a1bb4110728250806"; // твій ключ
 
 function fetchWeather(city) {
-  const API_URL = `http://api.weatherapi.com/v1/forecast.json?key=${WEATHER_API_KEY}&q=${city}&days=3&aqi=no&alerts=no`;
+  const API_URL = `https://api.weatherapi.com/v1/forecast.json?key=${WEATHER_API_KEY}&q=${city}&days=3&aqi=no&alerts=no`;
 
   cityEl.textContent = "Завантаження...";
   forecastEl.innerHTML = "";
@@ -94,7 +94,7 @@ function fetchCitySuggestions(query) {
     return;
   }
 
-  const SEARCH_API_URL = `http://api.weatherapi.com/v1/search.json?key=${WEATHER_API_KEY}&q=${query}`;
+  const SEARCH_API_URL = `https://api.weatherapi.com/v1/search.json?key=${WEATHER_API_KEY}&q=${query}`;
 
   fetch(SEARCH_API_URL)
     .then(res => res.json())
